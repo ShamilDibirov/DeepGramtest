@@ -33,7 +33,7 @@ interface DeepgramContextProviderProps {
 }
 
 const getToken = async (): Promise<string> => {
-  const response = await fetch("https://0a0c3a0452ca.ngrok-free.app/api/authenticate", { cache: "no-store" });
+  const response = await fetch("/api/authenticate", { cache: "no-store" });
   const result = await response.json();
   return result.access_token;
 };
